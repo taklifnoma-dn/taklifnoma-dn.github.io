@@ -257,8 +257,8 @@ footer .sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;t
   </svg>
 </button>
 
-<!-- ✏️ MUSIQA: repo papkasiga musiqa.mp3 faylini tashlang -->
-<audio id="bgAudio" loop preload="none" src="musiqa.mp3"></audio>
+<!-- Fon musiqasi — Mixkit Free License (attribution talab qilinmaydi) -->
+<audio id="bgAudio" loop preload="metadata" src="musiqa.m4a"></audio>
 
 <div class="wrap">
 
@@ -441,7 +441,7 @@ document.querySelectorAll('.rise:not(.in)').forEach(el => io.observe(el));
 
 /* ---------- Fon musiqasi ---------- */
 const audio = $('bgAudio'), mBtn = $('musicBtn');
-audio.addEventListener('canplay', () => mBtn.classList.add('show'));
+['loadedmetadata','canplay'].forEach(ev => audio.addEventListener(ev, () => mBtn.classList.add('show')));
 audio.addEventListener('error', () => mBtn.classList.remove('show'));
 audio.load();
 mBtn.addEventListener('click', () => {
