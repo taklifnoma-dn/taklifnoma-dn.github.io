@@ -136,27 +136,6 @@ section{padding:78px 26px;position:relative}
 }
 
 /* ============================================================
-   KUN TARTIBI (timeline)
-   ============================================================ */
-.timeline{max-width:400px;margin:36px auto 0;position:relative}
-.timeline::before{
-  content:'';position:absolute;left:52px;top:12px;bottom:12px;
-  width:1px;background:var(--oltin-soft);
-}
-.tl-item{display:grid;grid-template-columns:52px 1fr;gap:26px;align-items:start;padding:15px 0;position:relative}
-.tl-time{
-  font-family:'Jost',sans-serif;font-weight:400;font-size:14px;
-  color:var(--oltin);text-align:right;padding-top:4px;letter-spacing:.04em;
-}
-.tl-item::after{
-  content:'';position:absolute;left:49px;top:23px;
-  width:7px;height:7px;background:var(--qogoz);
-  border:1px solid var(--oltin);border-radius:50%;
-}
-.tl-text{font-size:clamp(18px,4.2vw,21px);font-weight:600}
-.tl-note{font-size:16px;color:var(--siyoh-dim);margin-top:1px;font-weight:500}
-
-/* ============================================================
    TUGMALAR
    ============================================================ */
 .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
@@ -170,34 +149,6 @@ section{padding:78px 26px;position:relative}
 .btn-red:hover{filter:brightness(1.12)}
 .btn-gold{border:1px solid var(--oltin);color:var(--siyoh);background:transparent}
 .btn-gold:hover{background:rgba(203,174,81,.12)}
-
-/* ============================================================
-   RSVP
-   ============================================================ */
-.rsvp{background:var(--qogoz-2)}
-.form{max-width:400px;margin:32px auto 0;display:grid;gap:15px}
-.field label{
-  display:block;font-family:'Jost',sans-serif;font-size:11px;
-  letter-spacing:.24em;text-transform:uppercase;color:var(--oltin);margin-bottom:7px;
-}
-.field input,.field textarea{
-  width:100%;padding:13px 14px;
-  border:1px solid var(--oltin-soft);background:var(--qogoz);
-  font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;
-  color:var(--siyoh);border-radius:0;
-}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--oltin)}
-.field textarea{resize:vertical;min-height:74px}
-.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.choice button{
-  padding:14px 8px;border:1px solid var(--oltin-soft);background:var(--qogoz);
-  font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;
-  color:var(--siyoh);cursor:pointer;transition:.2s;
-}
-.choice button.on{background:var(--oltin);border-color:var(--oltin);color:#fff}
-.form-msg{text-align:center;font-size:18px;margin-top:6px;min-height:26px}
-.form-msg.ok{color:#2c7a4b}
-.form-msg.err{color:var(--qirmizi)}
 
 /* ============================================================
    FOOTER
@@ -322,31 +273,6 @@ footer .sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;t
     </div>
   </section>
 
-  <!-- ============ KUN TARTIBI ============ -->
-  <section>
-    <p class="eyebrow rise">Dastur</p>
-    <h2 class="h2 rise d1">Kun tartibi</h2>
-    <!-- ✏️ KUN TARTIBINI SHU YERDA O'ZGARTIRING -->
-    <div class="timeline rise d2">
-      <div class="tl-item">
-        <div class="tl-time">18:30</div>
-        <div><div class="tl-text">Mehmonlarni kutib olish</div><div class="tl-note">Xush kelibsiz!</div></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-time">19:00</div>
-        <div><div class="tl-text">Tantana boshlanishi</div><div class="tl-note">Kelin-kuyov kirib kelishi</div></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-time">20:00</div>
-        <div><div class="tl-text">Ziyofat</div><div class="tl-note">Konsert dasturi</div></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-time">22:00</div>
-        <div><div class="tl-text">Tantanaga yakun</div><div class="tl-note">Kelin salom</div></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ MANZIL ============ -->
   <section>
     <div class="rule rise" aria-hidden="true"></div>
@@ -357,37 +283,6 @@ footer .sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;t
     <div class="buttons rise d2">
       <a class="btn btn-red" href="https://maps.google.com/?q=Og%CA%BBabek+to%CA%BByxonasi" target="_blank" rel="noopener">Google Maps</a>
       <a class="btn btn-gold" href="https://yandex.uz/maps/?text=Og%CA%BBabek%20to%CA%BByxonasi" target="_blank" rel="noopener">Yandex Maps</a>
-    </div>
-  </section>
-
-  <!-- ============ RSVP ============ -->
-  <section class="rsvp">
-    <p class="eyebrow rise">Iltimos</p>
-    <h2 class="h2 rise d1">Kela olasizmi?</h2>
-    <p class="lead rise d2">Javobingizni bildirsangiz, mehmonlar sonini aniqlashimizga yordam beradi.</p>
-
-    <div class="form rise d2">
-      <div class="field">
-        <label for="ism">Ismingiz</label>
-        <input type="text" id="ism" placeholder="Ism familiya" autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="soni">Necha kishi bo'lasiz?</label>
-        <input type="number" id="soni" min="1" max="20" value="1" inputmode="numeric">
-      </div>
-      <div class="field">
-        <label>Javobingiz</label>
-        <div class="choice">
-          <button type="button" id="btnHa" data-val="Kelaman">Kelaman</button>
-          <button type="button" id="btnYoq" data-val="Kelolmayman">Kelolmayman</button>
-        </div>
-      </div>
-      <div class="field">
-        <label for="izoh">Tilaklaringiz (ixtiyoriy)</label>
-        <textarea id="izoh" placeholder="Ikkalangizga baxt tilayman..."></textarea>
-      </div>
-      <button class="btn btn-red" id="btnSend" style="width:100%">Javobni yuborish</button>
-      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
     </div>
   </section>
 
@@ -407,14 +302,6 @@ footer .sign{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;t
    ✏️ SOZLAMALAR
    ============================================================ */
 const TOY_SANASI = new Date('2026-08-30T19:00:00+05:00');  // +05:00 = Toshkent
-
-/* RSVP javoblari qayerga tushsin?
-   1-variant (tavsiya): formspree.io da bepul ro'yxatdan o'ting,
-   olingan manzilni shu yerga qo'ying:
-   const RSVP_ENDPOINT = 'https://formspree.io/f/xxxxxxx';
-   2-variant: bo'sh qoldirsangiz, javob Telegram orqali yuboriladi. */
-const RSVP_ENDPOINT = 'https://formspree.io/f/xpqvnypp';
-const TELEGRAM_USERNAME = 'taklifnoma_dn';   // ✏️ o'z Telegram username'ingiz (@ siz)
 
 /* ---------- Countdown ---------- */
 const $ = id => document.getElementById(id);
@@ -453,46 +340,6 @@ mBtn.addEventListener('click', () => {
   }
 });
 
-/* ---------- RSVP ---------- */
-let javob = '';
-const btnHa = $('btnHa'), btnYoq = $('btnYoq'), msg = $('formMsg');
-[btnHa, btnYoq].forEach(b => b.addEventListener('click', () => {
-  javob = b.dataset.val;
-  btnHa.classList.toggle('on', b === btnHa);
-  btnYoq.classList.toggle('on', b === btnYoq);
-}));
-
-$('btnSend').addEventListener('click', async () => {
-  const ism = $('ism').value.trim();
-  const soni = $('soni').value;
-  const izoh = $('izoh').value.trim();
-
-  if (!ism){ msg.className='form-msg err'; msg.textContent='Iltimos, ismingizni yozing.'; return; }
-  if (!javob){ msg.className='form-msg err'; msg.textContent='Iltimos, javobingizni tanlang.'; return; }
-
-  const matn = `To'y javobi\nIsm: ${ism}\nJavob: ${javob}\nSoni: ${soni}\nTilak: ${izoh || '—'}`;
-
-  if (RSVP_ENDPOINT){
-    msg.className='form-msg'; msg.textContent='Yuborilmoqda...';
-    try{
-      const r = await fetch(RSVP_ENDPOINT, {
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body: JSON.stringify({ ism, javob, soni, izoh })
-      });
-      if (!r.ok) throw new Error();
-      msg.className='form-msg ok'; msg.textContent='Rahmat! Javobingiz qabul qilindi.';
-      $('btnSend').disabled = true;
-    }catch{
-      msg.className='form-msg err'; msg.textContent='Xatolik yuz berdi. Telegram orqali yuboring.';
-    }
-  } else {
-    window.open('https://t.me/' + TELEGRAM_USERNAME, '_blank');
-    navigator.clipboard?.writeText(matn);
-    msg.className='form-msg ok';
-    msg.textContent='Javobingiz nusxalandi — Telegramda yuborsangiz kifoya.';
-  }
-});
 </script>
 
 </body>
